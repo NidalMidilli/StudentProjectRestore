@@ -1,0 +1,52 @@
+﻿@{
+    Layout=null;
+}
+@using EntityLayer
+@model List<Student>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+<div class="container">
+    <div class="p-5 w-50 mx-3">
+
+        
+   
+    </div>
+    <br />
+
+
+  <div class="card">
+  <h5 class="card-header bg-secondary text-white">Student List</h5>
+  <div class="card-body bg-white">
+    <h5 class="card-title">Students Details</h5>
+    
+    <table class="table table-bordered bg-white">
+
+        <thead>
+            <tr>
+                <th>Student Id</th>
+                <th>Student Name</th>
+                <th>Student Surname</th>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model)
+
+        {
+            <tbody>
+                <tr>
+                    <td>@item.studentId</td>
+                    <td>@item.studentName</td>
+                    <td>@item.studentSurname</td>
+                </tr>
+            </tbody>
+
+        }
+
+
+
+    </table>
+  
+  </div>
+</div>
+
+</div>
